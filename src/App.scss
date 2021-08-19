@@ -1,0 +1,99 @@
+body{
+  font-family: 'Product Sans';
+  background-color: black;
+  color: white;
+  .periodic-table{
+    display: grid;
+    grid-template-columns: repeat(18,calc(80vw/18));
+    grid-template-rows: repeat(10,calc(80vw/18));
+    grid-gap: 2px;
+    margin: 0px 10vw;
+    .element-display{
+      padding: 1em;
+      padding-top: 0px;
+      display: grid;
+      grid-template-columns: 4fr 6fr;
+      grid-gap: 1em;
+    }
+    .element{
+      display: grid;
+      align-items: center;
+      cursor: pointer;
+      padding: 3px;
+       background-color: rgba(0, 0, 0, 0.301);
+       border: 1px solid rgba(255, 255, 255, 0.6);;
+      border-radius: 2px;
+      transition-duration: 0.2s;
+      &:hover{
+        color: black;
+        background-color: white;
+        border: 1px solid rgb(0, 0, 0);
+        transform: scale(1.2);
+        border-radius: 4px;
+        transition-duration: 0.1s;
+        transition-delay: 0.02s;
+      }
+
+      &.AlkaliMetal{
+        color: rgb(212, 77, 23)
+      }
+      &.AlkalineEarth{
+        color: rgb(255, 136, 0)
+      }
+      &.TransitionMetal,&.Transactinideundefined{
+        color: rgb(224, 79, 79)
+      }
+      &.Metalundefined{
+        color: rgb(60, 161, 255)
+      }
+      &.Metalloidundefined{
+        color: rgb(22, 199, 146)
+      }
+      &.Nonmetalundefined{
+        color: rgb(102, 214, 80)
+      }
+      &.Halogenundefined{
+        color: rgb(218, 126, 221)
+      }
+      &.NobleGas{
+        color: rgb(145, 77, 223)
+      }
+      &.Lanthanide{
+        color: rgb(104, 77, 223)
+      }
+      &.Actinide{
+        color: rgb(157, 77, 223)
+      }
+
+      &.dummy{
+        opacity: 0;
+      }
+      p{
+
+        display: inline-block;
+        margin: 0;
+      }
+      .atomicNumber{
+        font-size: 0.6em;
+        opacity: 0.9;
+        margin-top: -5px;
+      }
+      .symbol{
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-top: -5px;
+        margin-bottom: -5px;
+        text-align: center;
+      }
+      .elementName{
+        font-size: 0.6em;
+        font-weight: bold;
+        text-align: center;
+      }
+      .atomicMass{
+        font-size: 0.6em;
+        opacity: 0.6;
+      }
+    }
+  }
+}
